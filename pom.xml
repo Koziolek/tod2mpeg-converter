@@ -9,14 +9,13 @@
 
 	<name>tod2mpg-converter</name>
 	<url>http://maven.apache.org</url>
-
+	<inceptionYear>2011</inceptionYear>
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 	</properties>
 
 	<build>
 		<plugins>
-
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-compiler-plugin</artifactId>
@@ -125,6 +124,14 @@
 						</goals>
 					</execution>
 				</executions>
+			</plugin>
+			<plugin>
+				<groupId>org.codehaus.mojo</groupId>
+				<artifactId>license-maven-plugin</artifactId>
+				<configuration>
+					<licenseName>beerware</licenseName>
+					<licenseResolver>file://${basedir}/src/license/</licenseResolver>
+				</configuration>
 			</plugin>
 		</plugins>
 	</build>
